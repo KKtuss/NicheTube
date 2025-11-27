@@ -1,0 +1,12 @@
+{
+  "name": "nichetube",
+  "version": "1.0.0",
+  "description": "NicheTube - A YouTube UI replica for thumbnail memes",
+  "scripts": {
+    "start": "npx http-server -p 8000"
+  },
+  "keywords": ["youtube", "ui", "replica", "thumbnails"],
+  "author": "",
+  "license": "MIT"
+}
+
