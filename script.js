@@ -79,12 +79,40 @@ function setup(){
     t.classList.add('active')
   })
   const searchBtn=document.getElementById('searchBtn')
+  const searchBtnMobile=document.getElementById('searchBtnMobile')
   const searchInput=document.getElementById('searchInput')
-  searchBtn.addEventListener('click',()=>{
-    const q=searchInput.value.trim()
+  function handleSearch(){
+    const q=searchInput?searchInput.value.trim():''
     if(!q)return
     const url=`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`
     window.open(url,'_blank')
+  }
+  if(searchBtn)searchBtn.addEventListener('click',handleSearch)
+  if(searchBtnMobile)searchBtnMobile.addEventListener('click',handleSearch)
+  const menuBtn=document.getElementById('menuBtn')
+  const sidebar=document.getElementById('sidebar')
+  const sidebarOverlay=document.getElementById('sidebarOverlay')
+  function isMobile(){return window.innerWidth<=768}
+  function closeSidebar(){
+    sidebar.classList.remove('mobile-open')
+    sidebarOverlay.classList.remove('show')
+  }
+  if(isMobile()){
+    menuBtn.addEventListener('click',(e)=>{
+      e.stopPropagation()
+      sidebar.classList.toggle('mobile-open')
+      sidebarOverlay.classList.toggle('show')
+    })
+    sidebarOverlay.addEventListener('click',closeSidebar)
+    const navItems=sidebar.querySelectorAll('.nav-item')
+    navItems.forEach(item=>{
+      item.addEventListener('click',closeSidebar)
+    })
+  }
+  window.addEventListener('resize',()=>{
+    if(!isMobile()){
+      closeSidebar()
+    }
   })
   const profileBtn=document.getElementById('profileBtn')
   const profilePopup=document.getElementById('profilePopup')
@@ -112,6 +140,34 @@ function setup(){
     }
   })
   render()
+  function fixMobileLayout(){
+    if(window.innerWidth<=768){
+      const topbar=document.querySelector('.topbar')
+      const chips=document.getElementById('chips')
+      const grid=document.getElementById('grid')
+      if(topbar&&chips&&grid){
+        const headerRect=topbar.getBoundingClientRect()
+        const headerHeight=headerRect.height
+        chips.style.top=headerHeight+'px'
+        chips.style.marginTop='0'
+        chips.style.paddingTop='8px'
+        chips.style.paddingBottom='8px'
+        const chipsRect=chips.getBoundingClientRect()
+        const chipsHeight=chipsRect.height
+        grid.style.paddingTop=(chipsHeight+8)+'px'
+        grid.style.marginTop='0'
+        console.log('Header height:',headerHeight,'Chips height:',chipsHeight,'Grid padding:',chipsHeight+8)
+      }
+    }
+  }
+  setTimeout(fixMobileLayout,200)
+  window.addEventListener('resize',()=>{
+    if(!isMobile()){
+      closeSidebar()
+    }else{
+      setTimeout(fixMobileLayout,50)
+    }
+  })
 }
 
 document.addEventListener('DOMContentLoaded',setup)
