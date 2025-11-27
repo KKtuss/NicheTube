@@ -1,23 +1,54 @@
-const avatarData="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='20' fill='%23ddd'/></svg>"
-const allVideos=[
-  {title:"Yappersteak",channel:"Thumbnail Memes",views:"1.2M views",age:"2 days ago",duration:"5:23",avatar:avatarData,thumb:"Thumbnails/Yappersteak.png",href:"#"},
-  {title:"Do we deserve destruction",channel:"Thumbnail Memes",views:"856K views",age:"1 week ago",duration:"7:45",avatar:avatarData,thumb:"Thumbnails/Do we deserve destruction.png",href:"#"},
-  {title:"Shoebill",channel:"Thumbnail Memes",views:"2.4M views",age:"3 days ago",duration:"4:12",avatar:avatarData,thumb:"Thumbnails/Shoebill.png",href:"#"},
-  {title:"CP Noob pro hacker god",channel:"Thumbnail Memes",views:"3.1M views",age:"5 days ago",duration:"6:30",avatar:avatarData,thumb:"Thumbnails/CP Noob pro hacker god.png",href:"#"},
-  {title:"I'm out !",channel:"Thumbnail Memes",views:"1.8M views",age:"4 days ago",duration:"8:20",avatar:avatarData,thumb:"Thumbnails/I'm out !.png",href:"#"},
-  {title:"Our brains are shrinking",channel:"Thumbnail Memes",views:"945K views",age:"6 days ago",duration:"8:15",avatar:avatarData,thumb:"Thumbnails/our-brains-are-shrinking-our-brains-are.png",href:"#"},
-  {title:"Sigma",channel:"Thumbnail Memes",views:"5.2M views",age:"1 week ago",duration:"10:02",avatar:avatarData,thumb:"Thumbnails/Sigma.jpg",href:"#"},
-  {title:"Ancestors",channel:"Thumbnail Memes",views:"1.5M views",age:"1 day ago",duration:"6:45",avatar:avatarData,thumb:"Thumbnails/Ancestors.png",href:"#"},
-  {title:"Chomp plant",channel:"Thumbnail Memes",views:"2.1M views",age:"4 days ago",duration:"5:30",avatar:avatarData,thumb:"Thumbnails/Chomp plant.png",href:"#"},
-  {title:"Doesnt fit in",channel:"Thumbnail Memes",views:"980K views",age:"2 weeks ago",duration:"7:20",avatar:avatarData,thumb:"Thumbnails/Doesnt fit in.png",href:"#"},
-  {title:"DONT CELEBRATE A GOAL THIS WAY !!",channel:"Thumbnail Memes",views:"3.5M views",age:"5 days ago",duration:"4:50",avatar:avatarData,thumb:"Thumbnails/DONT CELEBRATE A GOAL THIS WAY !!.png",href:"#"},
-  {title:"Fire writing",channel:"Thumbnail Memes",views:"1.7M views",age:"3 days ago",duration:"9:15",avatar:avatarData,thumb:"Thumbnails/Fire writing.png",href:"#"},
-  {title:"Is dragon ball sparkling zero better than sex",channel:"Thumbnail Memes",views:"4.2M views",age:"6 days ago",duration:"11:30",avatar:avatarData,thumb:"Thumbnails/Is dragon ball sparkling zero better than sex.png",href:"#"},
-  {title:"Is pibble really the vilain",channel:"Thumbnail Memes",views:"2.8M views",age:"1 week ago",duration:"8:45",avatar:avatarData,thumb:"Thumbnails/Is pibble really the vilain.png",href:"#"},
-  {title:"Rape",channel:"Thumbnail Memes",views:"1.3M views",age:"2 days ago",duration:"6:10",avatar:avatarData,thumb:"Thumbnails/Rape.png",href:"#"},
-  {title:"Worst video of all time",channel:"Thumbnail Memes",views:"5.8M views",age:"1 day ago",duration:"12:45",avatar:avatarData,thumb:"Thumbnails/Worst video of all time.png",href:"#"}
+function generateAvatar(color){
+  const encodedColor=encodeURIComponent(color)
+  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='20' fill='${encodedColor}'/></svg>`
+}
+const channelNames=[
+  "Thumbnail Memes","Meme Central","Viral Moments","Internet Gold","Trending Now",
+  "Reaction Time","Meme Review","Shitpost Daily","Based Content","Sigma Grindset",
+  "Alpha Energy","Chad Lifestyle","Gigachad Moments","Based Takes","Woke Destroyer",
+  "Red Pill Reality","Based Memes","Sigma Tips","Alpha Mindset","Chad Chronicles",
+  "Meme Lord","Viral Clips","Internet Culture","Meme Archive","Trending Clips"
 ]
-const videos=allVideos.sort(()=>Math.random()-0.5)
+const avatarColors=[
+  "#ff0000","#00ff00","#0000ff","#ffff00","#ff00ff","#00ffff","#ff8800","#8800ff",
+  "#00ff88","#ff0088","#888888","#ff4444","#44ff44","#4444ff","#ffaa00","#aa00ff",
+  "#00ffaa","#ff00aa","#aa4444","#44aa44","#4444aa","#ff6600","#6600ff","#00ff66"
+]
+function getRandomChannel(){
+  return channelNames[Math.floor(Math.random()*channelNames.length)]
+}
+function getRandomAvatar(){
+  const color=avatarColors[Math.floor(Math.random()*avatarColors.length)]
+  return generateAvatar(color)
+}
+const allVideos=[
+  {title:"Do We Deserve Destruction? (The Truth Will Shock You)",views:"856K views",age:"1 week ago",duration:"7:45",thumb:"Thumbnails/Do we deserve destruction.png",href:"#"},
+  {title:"Shoebill Gets DESTROYED (You Won't Believe What Happens)",views:"2.4M views",age:"3 days ago",duration:"4:12",thumb:"Thumbnails/Shoebill.png",href:"#"},
+  {title:"From CP Noob to Pro to Hacker to God (I Tried This For 30 Days)",views:"3.1M views",age:"5 days ago",duration:"6:30",thumb:"Thumbnails/CP Noob pro hacker god.png",href:"#"},
+  {title:"FASTEST \"I'M OUT\" Pitches On Shark Tank",views:"1.8M views",age:"4 days ago",duration:"8:20",thumb:"Thumbnails/I'm out !.png",href:"#"},
+  {title:"Our Brains Are Shrinking (Scientists Are WORRIED)",views:"945K views",age:"6 days ago",duration:"8:15",thumb:"Thumbnails/our-brains-are-shrinking-our-brains-are.png",href:"#"},
+  {title:"10 Signs You Are NOT A Sigma Male",views:"5.2M views",age:"1 week ago",duration:"10:02",thumb:"Thumbnails/Sigma.jpg",href:"#"},
+  {title:"Ancestors Explained (You Won't Believe What They Did)",views:"1.5M views",age:"1 day ago",duration:"6:45",thumb:"Thumbnails/Ancestors.png",href:"#"},
+  {title:"Chomp Plant: The Most Dangerous Plant You've Never Seen",views:"2.1M views",age:"4 days ago",duration:"5:30",thumb:"Thumbnails/Chomp plant.png",href:"#"},
+  {title:"Doesn't Fit In (The Truth About Social Outcasts)",views:"980K views",age:"2 weeks ago",duration:"7:20",thumb:"Thumbnails/Doesnt fit in.png",href:"#"},
+  {title:"DON'T Celebrate A Goal This Way!! (You'll Regret It)",views:"3.5M views",age:"5 days ago",duration:"4:50",thumb:"Thumbnails/DONT CELEBRATE A GOAL THIS WAY !!.png",href:"#"},
+  {title:"Fire Writing Tutorial (This Technique Is INSANE)",views:"1.7M views",age:"3 days ago",duration:"9:15",thumb:"Thumbnails/Fire writing.png",href:"#"},
+  {title:"Is Dragon Ball Sparkling Zero Better Than Sex? (Honest Review)",views:"4.2M views",age:"6 days ago",duration:"11:30",thumb:"Thumbnails/Is dragon ball sparkling zero better than sex.png",href:"#"},
+  {title:"Is Pibble Really The Villain? (The Truth Exposed)",views:"2.8M views",age:"1 week ago",duration:"8:45",thumb:"Thumbnails/Is pibble really the vilain.png",href:"#"},
+  {title:"REAL R@PIST REACTS TO R@PE IN FICTION - PROFESSIONNAL REACTS",views:"1.3M views",age:"2 days ago",duration:"6:10",thumb:"Thumbnails/Rape.png",href:"#"},
+  {title:"Worst Video Of All Time (You Won't Believe This Exists)",views:"5.8M views",age:"1 day ago",duration:"12:45",thumb:"Thumbnails/Worst video of all time.png",href:"#"},
+  {title:"I Abandoned My Family to Learn Arabic (30 Day Challenge)",views:"3.7M views",age:"4 days ago",duration:"15:30",thumb:"Thumbnails/Divorce your wife abandon your kids learn arabic.png",href:"#"},
+  {title:"How to Actually Scam Retarded Goycattle Online in 2025 (Copy me)",views:"2.9M views",age:"1 week ago",duration:"9:45",thumb:"Thumbnails/How to scam retarded goycattle online.png",href:"#"},
+  {title:"I Punched Babies in Public (Social Experiment Gone Wrong)",views:"6.4M views",age:"2 days ago",duration:"8:20",thumb:"Thumbnails/Punching babies in public.png",href:"#"},
+  {title:"What Was He Actually Cooking? (You Won't Believe This)",views:"4.1M views",age:"3 days ago",duration:"7:15",thumb:"Thumbnails/What was he cooking.png",href:"#"},
+  {title:"Why Do They Jiggle? (The Science Behind It)",views:"1.9M views",age:"5 days ago",duration:"6:50",thumb:"Thumbnails/Why do they giggle.png",href:"#"},
+  {title:"Why Is He Lying? (Body Language Analysis)",views:"2.6M views",age:"1 day ago",duration:"10:25",thumb:"Thumbnails/Why is he lying.png",href:"#"}
+]
+const videos=allVideos.map(v=>({
+  ...v,
+  channel:getRandomChannel(),
+  avatar:getRandomAvatar()
+})).sort(()=>Math.random()-0.5)
 
 function thumbUrl(id){return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
 
@@ -66,8 +97,11 @@ function render(){
     meta.appendChild(av)
     meta.appendChild(text)
 
+    const overlay=document.createElement('div')
+    overlay.className='video-overlay'
     card.appendChild(thumb)
     card.appendChild(meta)
+    card.appendChild(overlay)
     grid.appendChild(card)
   })
 }
