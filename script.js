@@ -22,33 +22,32 @@ function getRandomAvatar(){
   return generateAvatar(color)
 }
 const allVideos=[
-  {title:"Do We Deserve Destruction? (The Truth Will Shock You)",views:"856K views",age:"1 week ago",duration:"7:45",thumb:"Thumbnails/Do we deserve destruction.png",href:"#"},
-  {title:"Shoebill Gets DESTROYED (You Won't Believe What Happens)",views:"2.4M views",age:"3 days ago",duration:"4:12",thumb:"Thumbnails/Shoebill.png",href:"#"},
-  {title:"From CP Noob to Pro to Hacker to God (I Tried This For 30 Days)",views:"3.1M views",age:"5 days ago",duration:"6:30",thumb:"Thumbnails/CP Noob pro hacker god.png",href:"#"},
-  {title:"FASTEST \"I'M OUT\" Pitches On Shark Tank",views:"1.8M views",age:"4 days ago",duration:"8:20",thumb:"Thumbnails/I'm out !.png",href:"#"},
-  {title:"Our Brains Are Shrinking (Scientists Are WORRIED)",views:"945K views",age:"6 days ago",duration:"8:15",thumb:"Thumbnails/our-brains-are-shrinking-our-brains-are.png",href:"#"},
   {title:"10 Signs You Are NOT A Sigma Male",views:"5.2M views",age:"1 week ago",duration:"10:02",thumb:"Thumbnails/Sigma.jpg",href:"#"},
-  {title:"Ancestors Explained (You Won't Believe What They Did)",views:"1.5M views",age:"1 day ago",duration:"6:45",thumb:"Thumbnails/Ancestors.png",href:"#"},
-  {title:"Chomp Plant: The Most Dangerous Plant You've Never Seen",views:"2.1M views",age:"4 days ago",duration:"5:30",thumb:"Thumbnails/Chomp plant.png",href:"#"},
-  {title:"Doesn't Fit In (The Truth About Social Outcasts)",views:"980K views",age:"2 weeks ago",duration:"7:20",thumb:"Thumbnails/Doesnt fit in.png",href:"#"},
   {title:"DON'T Celebrate A Goal This Way!! (You'll Regret It)",views:"3.5M views",age:"5 days ago",duration:"4:50",thumb:"Thumbnails/DONT CELEBRATE A GOAL THIS WAY !!.png",href:"#"},
-  {title:"Fire Writing Tutorial (This Technique Is INSANE)",views:"1.7M views",age:"3 days ago",duration:"9:15",thumb:"Thumbnails/Fire writing.png",href:"#"},
-  {title:"Is Dragon Ball Sparkling Zero Better Than Sex? (Honest Review)",views:"4.2M views",age:"6 days ago",duration:"11:30",thumb:"Thumbnails/Is dragon ball sparkling zero better than sex.png",href:"#"},
-  {title:"Is Pibble Really The Villain? (The Truth Exposed)",views:"2.8M views",age:"1 week ago",duration:"8:45",thumb:"Thumbnails/Is pibble really the vilain.png",href:"#"},
-  {title:"REAL R@PIST REACTS TO R@PE IN FICTION - PROFESSIONNAL REACTS",views:"1.3M views",age:"2 days ago",duration:"6:10",thumb:"Thumbnails/Rape.png",href:"#"},
-  {title:"Worst Video Of All Time (You Won't Believe This Exists)",views:"5.8M views",age:"1 day ago",duration:"12:45",thumb:"Thumbnails/Worst video of all time.png",href:"#"},
-  {title:"I Abandoned My Family to Learn Arabic (30 Day Challenge)",views:"3.7M views",age:"4 days ago",duration:"15:30",thumb:"Thumbnails/Divorce your wife abandon your kids learn arabic.png",href:"#"},
+  {title:"Ancestors Explained (You Won't Believe What They Did)",views:"1.5M views",age:"1 day ago",duration:"6:45",thumb:"Thumbnails/Ancestors.png",href:"#"},
   {title:"How to Actually Scam Retarded Goycattle Online in 2025 (Copy me)",views:"2.9M views",age:"1 week ago",duration:"9:45",thumb:"Thumbnails/How to scam retarded goycattle online.png",href:"#"},
+  {title:"Our Brains Are Shrinking (Scientists Are WORRIED)",views:"945K views",age:"6 days ago",duration:"8:15",thumb:"Thumbnails/our-brains-are-shrinking-our-brains-are.png",href:"#"},
+  {title:"Chomp Plant: The Most Dangerous Plant You've Never Seen",views:"2.1M views",age:"4 days ago",duration:"5:30",thumb:"Thumbnails/Chomp plant.png",href:"#"},
   {title:"I Punched Babies in Public (Social Experiment Gone Wrong)",views:"6.4M views",age:"2 days ago",duration:"8:20",thumb:"Thumbnails/Punching babies in public.png",href:"#"},
-  {title:"What Was He Actually Cooking? (You Won't Believe This)",views:"4.1M views",age:"3 days ago",duration:"7:15",thumb:"Thumbnails/What was he cooking.png",href:"#"},
+  {title:"Is Dragon Ball Sparkling Zero Better Than Sex? (Honest Review)",views:"4.2M views",age:"6 days ago",duration:"11:30",thumb:"Thumbnails/Is dragon ball sparkling zero better than sex.png",href:"#"},
+  {title:"Why Is He Lying? (Body Language Analysis)",views:"2.6M views",age:"1 day ago",duration:"10:25",thumb:"Thumbnails/Why is he lying.png",href:"#"},
+  {title:"Shoebill Gets DESTROYED (You Won't Believe What Happens)",views:"2.4M views",age:"3 days ago",duration:"4:12",thumb:"Thumbnails/Shoebill.png",href:"#"},
+  {title:"Fire Writing Tutorial (This Technique Is INSANE)",views:"1.7M views",age:"3 days ago",duration:"9:15",thumb:"Thumbnails/Fire writing.png",href:"#"},
+  {title:"I Abandoned My Family to Learn Arabic (30 Day Challenge)",views:"3.7M views",age:"4 days ago",duration:"15:30",thumb:"Thumbnails/Divorce your wife abandon your kids learn arabic.png",href:"#"},
+  {title:"From CP Noob to Pro to Hacker to God (I Tried This For 30 Days)",views:"3.1M views",age:"5 days ago",duration:"6:30",thumb:"Thumbnails/CP Noob pro hacker god.png",href:"#"},
   {title:"Why Do They Jiggle? (The Science Behind It)",views:"1.9M views",age:"5 days ago",duration:"6:50",thumb:"Thumbnails/Why do they giggle.png",href:"#"},
-  {title:"Why Is He Lying? (Body Language Analysis)",views:"2.6M views",age:"1 day ago",duration:"10:25",thumb:"Thumbnails/Why is he lying.png",href:"#"}
+  {title:"Worst Video Of All Time (You Won't Believe This Exists)",views:"5.8M views",age:"1 day ago",duration:"12:45",thumb:"Thumbnails/Worst video of all time.png",href:"#"},
+  {title:"Is Pibble Really The Villain? (The Truth Exposed)",views:"2.8M views",age:"1 week ago",duration:"8:45",thumb:"Thumbnails/Is pibble really the vilain.png",href:"#"},
+  {title:"FASTEST \"I'M OUT\" Pitches On Shark Tank",views:"1.8M views",age:"4 days ago",duration:"8:20",thumb:"Thumbnails/I'm out !.png",href:"#"},
+  {title:"Doesn't Fit In (The Truth About Social Outcasts)",views:"980K views",age:"2 weeks ago",duration:"7:20",thumb:"Thumbnails/Doesnt fit in.png",href:"#"},
+  {title:"Do We Deserve Destruction? (The Truth Will Shock You)",views:"856K views",age:"1 week ago",duration:"7:45",thumb:"Thumbnails/Do we deserve destruction.png",href:"#"},
+  {title:"REAL R@PIST REACTS TO R@PE IN FICTION - PROFESSIONNAL REACTS",views:"1.3M views",age:"2 days ago",duration:"6:10",thumb:"Thumbnails/Rape.png",href:"#"}
 ]
 const videos=allVideos.map(v=>({
   ...v,
   channel:getRandomChannel(),
   avatar:getRandomAvatar()
-})).sort(()=>Math.random()-0.5)
+}))
 
 function thumbUrl(id){return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
 

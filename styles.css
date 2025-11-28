@@ -23,7 +23,7 @@ a, a:visited, a:hover, a:active{color:inherit;text-decoration:none}
 .search-btn{border:1px solid var(--soft);border-left:0;padding:10px 16px;border-radius:0 20px 20px 0;background:var(--surface);color:var(--text);height:40px;box-sizing:border-box}
 .search-btn-mobile{display:none}
 .voice{background:var(--surface)}
-.avatar{border:0;background:transparent;border-radius:999px;overflow:hidden;width:32px;height:32px;padding:0;display:inline-flex;align-items:center;justify-content:center;color:var(--text);cursor:pointer}
+.avatar{border:0;background:transparent;border-radius:999px;overflow:hidden;width:40px;height:40px;padding:0;display:inline-flex;align-items:center;justify-content:center;color:var(--text);cursor:pointer}
 .avatar img{width:100%;height:100%;display:block}
 .avatar svg{width:100%;height:100%;display:block}
 .profile-popup{position:fixed;top:60px;right:24px;background:var(--bg);border:1px solid var(--soft);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:100;display:none;min-width:300px;overflow:hidden}
