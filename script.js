@@ -169,7 +169,7 @@ function setup(){
     }
   })
   const contractAddressItem=document.getElementById('contractAddressItem')
-  const contractAddress=''
+  const contractAddress='319HcUFA67YjNFsbJAUfhMLVoNPmjpJtf9w4rwch4tCp'
   contractAddressItem.addEventListener('click',async()=>{
     try{
       await navigator.clipboard.writeText(contractAddress)
