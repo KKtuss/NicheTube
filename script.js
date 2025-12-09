@@ -18,8 +18,7 @@ function getRandomChannel(){
   return channelNames[Math.floor(Math.random()*channelNames.length)]
 }
 function getRandomAvatar(){
-  const color=avatarColors[Math.floor(Math.random()*avatarColors.length)]
-  return generateAvatar(color)
+  return 'Thumbnail memes.png'
 }
 const allVideos=[
   {title:"10 Signs You Are NOT A Sigma Male",views:"5.2M views",age:"1 week ago",duration:"10:02",thumb:"Thumbnails/Sigma.jpg",href:"#"},
