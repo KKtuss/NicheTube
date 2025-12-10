@@ -41,7 +41,13 @@ const allVideos=[
   {title:"FASTEST \"I'M OUT\" Pitches On Shark Tank",views:"1.8M views",age:"4 days ago",duration:"8:20",thumb:"Thumbnails/I'm out !.png",href:"#"},
   {title:"Doesn't Fit In (The Truth About Social Outcasts)",views:"980K views",age:"2 weeks ago",duration:"7:20",thumb:"Thumbnails/Doesnt fit in.png",href:"#"},
   {title:"Do We Deserve Destruction? (The Truth Will Shock You)",views:"856K views",age:"1 week ago",duration:"7:45",thumb:"Thumbnails/Do we deserve destruction.png",href:"#"},
-  {title:"REAL R@PIST REACTS TO R@PE IN FICTION - PROFESSIONNAL REACTS",views:"1.3M views",age:"2 days ago",duration:"6:10",thumb:"Thumbnails/Rape.png",href:"#"}
+  {title:"REAL R@PIST REACTS TO R@PE IN FICTION - PROFESSIONNAL REACTS",views:"1.3M views",age:"2 days ago",duration:"6:10",thumb:"Thumbnails/Rape.png",href:"#"},
+  {title:"If You Laugh You Go to Israel (Challenge Gone Wrong)",views:"3.2M views",age:"1 day ago",duration:"7:45",thumb:"Thumbnails/If you laugh you go to israel.png",href:"#"},
+  {title:"Watching Porn With The Gang (Social Experiment)",views:"4.5M views",age:"3 days ago",duration:"9:20",thumb:"Thumbnails/Watching porn with the gng.png",href:"#"},
+  {title:"What Are They Doing? (You Won't Believe This)",views:"2.7M views",age:"5 days ago",duration:"5:15",thumb:"Thumbnails/What are they doing.png",href:"#"},
+  {title:"What Happened to Shame? (The Truth Will Shock You)",views:"1.6M views",age:"4 days ago",duration:"8:30",thumb:"Thumbnails/What happened to shame.png",href:"#"},
+  {title:"What Was He Cooking? (This Is INSANE)",views:"3.9M views",age:"2 days ago",duration:"6:45",thumb:"Thumbnails/What was he cooking.png",href:"#"},
+  {title:"Yappersteak: The Most Controversial Food Ever",views:"2.1M views",age:"1 week ago",duration:"10:20",thumb:"Thumbnails/Yappersteak.png",href:"#"}
 ]
 const videos=allVideos.map(v=>({
   ...v,
